@@ -25,5 +25,6 @@ jobs:
           git add assets/notion/
           if ! git diff --cached --quiet; then
             git commit -m "Import original portfolio images from Notion"
-            git push
+            git pull --rebase origin main
+            git push origin main
           fi
